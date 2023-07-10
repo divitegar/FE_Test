@@ -1,0 +1,41 @@
+$base-red: #a60a0a;
+$base-disabled: #d5d4d4;
+
+.loader {
+  border: 2px solid #090909; /* Light grey */
+  border-top: 2px solid #ffffff; /* Blue */
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.styleButton {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 100px;
+  border-radius: 4px;
+  &.red {
+    background-color: $base-red;
+    color: white;
+    border: 2px solid $base-red;
+  }
+  &.black {
+    background-color: black;
+    color: white;
+  }
+  &:disabled {
+    background-color: #e0e0e0f8;
+    border: 2px solid $base-disabled;
+  }
+}
